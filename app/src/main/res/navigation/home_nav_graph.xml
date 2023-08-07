@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/userInfo">
+
+    <fragment
+        android:id="@+id/userInfo"
+        android:name="com.example.milkrevenuetracker.ui.UserInfo"
+        android:label="UserInfo" >
+        <action
+            android:id="@+id/action_userInfo_to_inputPrice"
+            app:destination="@id/inputPrice" />
+        <action
+            android:id="@+id/action_userInfo_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputPrice"
+        android:name="com.example.milkrevenuetracker.ui.InputPrice"
+        android:label="fragment_input_price"
+        tools:layout="@layout/fragment_input_price" >
+        <action
+            android:id="@+id/action_inputPrice_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.milkrevenuetracker.ui.DashboardFragment"
+        android:label="DashboardFragment" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_inputDetail"
+            app:destination="@id/inputDetail" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_sellList"
+            app:destination="@id/sellList" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputDetail"
+        android:name="com.example.milkrevenuetracker.ui.InputDetail"
+        android:label="fragment_input_detail"
+        tools:layout="@layout/fragment_input_detail" >
+        <action
+            android:id="@+id/action_inputDetail_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellList"
+        android:name="com.example.milkrevenuetracker.ui.SellList"
+        android:label="fragment_sell_list"
+        tools:layout="@layout/fragment_sell_list" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.milkrevenuetracker.ui.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+</navigation>
