@@ -125,11 +125,6 @@ class InputDetail : Fragment() {
 
 
 
-//        _binding?.discreteSlider?.onvalu { view, i, i2, i3, i4 ->
-//            _binding?.quantity?.text = i.toString()
-//
-//
-//        }
 
         _binding?.discreteSlider?.addOnChangeListener { slider, value, fromUser ->
 

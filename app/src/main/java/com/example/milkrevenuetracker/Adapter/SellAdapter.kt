@@ -27,7 +27,6 @@ class SellAdapter: RecyclerView.Adapter<SellAdapter.SellViewHolder>() {
         }
     }
 
-    // ListDiffer to efficiently deal with changes in the RecyclerView
     val differ = AsyncListDiffer(this, diffCallback)
 
     inner  class SellViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
